@@ -17,10 +17,14 @@ do
         URL=`echo $airport $dt \
             | sed 's/\-/ /g' \
             | awk '{printf("https://www.wunderground.com/history/airport/%s/%d/%d/%d/DailyHistory.html?format=1\n", $1, $2, $3, $4)}'`
+        echo -n "$airport on $dt... "
         if [[ ! -f csv/$airport/$dt.csv ]]
         then
             sleep 1
             curl -s $URL | sed 's/<br \/>$//g' > csv/$airport/$dt.csv
+            echo "Done"
+        else
+            echo "Skipped"
         fi
     done
 done
