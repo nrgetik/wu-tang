@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
-
-YEARS=1
+#
+# Usage: ./wu.sh [years]
+#
+# If years is not provided as an argument, a default value of 1 is used.
+YEARS=${1:-1}
 
 for airport in `cat airports.txt`
 do
     mkdir -pv csv/$airport
-    for dt in `python -c "from datetime import datetime, timedelta; print \
-        '\n'.join(((datetime.now() - timedelta(days=day)).strftime('%Y-%m-%d')) \
-        for day in range($YEARS * 365, 0, -1))"`
+    for dt in `python -c "from datetime import datetime, timedelta; \
+        now = datetime.now(); \
+        print '\n'.join(((now - timedelta(days=day)).strftime('%Y-%m-%d')) \
+        for day in range((now - datetime(now.year - $YEARS, now.month, \
+            now.day)).days, 0, -1))"`
     do
         URL=`echo $airport $dt \
             | sed 's/\-/ /g' \
