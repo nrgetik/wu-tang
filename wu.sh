@@ -20,8 +20,8 @@ do
         echo -n "$airport on $dt... "
         if [[ ! -f csv/$airport/$dt.csv ]]
         then
-            sleep 1
-            curl -s $URL | sed 's/<br \/>$//g' > csv/$airport/$dt.csv
+            sleep 0.25
+            curl -s $URL | sed '/./,$!d' | sed 's/<br \/>$//g' > csv/$airport/$dt.csv
             echo "Done"
         else
             echo "Skipped"
