@@ -1,2 +1,3 @@
-csv
+csv/
 wu-tang.db
+*.pyc
