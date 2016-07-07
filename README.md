@@ -1,11 +1,13 @@
 # wu-tang
 Weather Underground [-based] Thermal/Atmospheric Niceness Grade
 
-## specification
+## description
 This software seeks to determine the number of days that fall within certain
 climate/weather parameters observed at select US airports, and thus their
-corresponding cities, in an effort to rank "niceness" amongst these locales.
+corresponding cities, in an effort to rank atmospheric "niceness" amongst these
+locales.
 
+## specification
 Limiting observations to (roughly) daytime/afternoon hours, the proposed
 methodology is:
 
