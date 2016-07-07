@@ -15,12 +15,22 @@ def main():
     DBSession = sessionmaker(bind=engine)
     session = DBSession()
 
-    session.add(Locale(airport_icao="KJFK", city="New York", state="NY",
-                       time_zone="EDT"))
+    new_locale = Locale(airport_icao="KJFK", city="New York", state="NY",
+                        time_zone="EDT")
+    session.add(new_locale)
     session.commit()
 
-    # session.add(Observation())
-    # session.commit()
+    new_observation = Observation(time_local=datetime.now(),
+                                  date_utc=datetime.now(), temperature_f=55.5,
+                                  dew_point_f=55.5, relative_humidity=55.5,
+                                  sea_level_pressure_in=55.5,
+                                  visibility_miles=55.5, wind_direction=55.5,
+                                  wind_speed_mph=55.5, gust_speed_mph=55.5,
+                                  precipitation_in=55.5, events="Thunderstorm",
+                                  conditions="Scattered Clouds",
+                                  wind_dir_degrees=55.5, locale=new_locale)
+    session.add(new_observation)
+    session.commit()
 
 if __name__ == "__main__":
     main()
