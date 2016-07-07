@@ -34,5 +34,5 @@ class Observation(Base):
     events = Column(String(16))
     conditions = Column(String(16))
     wind_dir_degrees = Column(Integer)
-    locale_id = (Integer, ForeignKey("locales.id"))
+    locale_id = Column(Integer, ForeignKey("locales.id"))
     locale = relationship(Locale)
