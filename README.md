@@ -9,10 +9,10 @@ corresponding cities, in an effort to rank "niceness" amongst these locales.
 Limiting observations to (roughly) daytime/afternoon hours, the proposed
 methodology is:
 
-* Calculate days with an average temperature between 45°F and 95°F (excludes
-  uncomfortable temperatures)
-* Subtract days with an average heat index >= 91°F (excludes uncomfortable
-  humidity)
+* Making a broad stroke first, calculate days with an average temperature
+  between 45°F and 95°F
+* Subtract days with an average heat index >= 91°F (excludes
+  dangerous/uncomfortable heat/humidity)
 * Subtract days with significant precipitation (excludes inconvenient rainfall)
 * Subtract days with significant cloud cover (excludes dreariness)
 * Subtract days with low visibility (excludes fog/air pollution)
