@@ -1,11 +1,26 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import csv
+import os
 from datetime import datetime
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from wu import Base, Locale, Observation
+
+
+def validate(v, t):
+    if t == float:
+        try:
+            return float(v)
+        except ValueError:
+            return None
+    if t == str:
+        if isinstance(v, str) and len(v) > 1 and "N/A" not in v:
+            return v
+        else:
+            return None
 
 
 def main():
@@ -15,22 +30,41 @@ def main():
     DBSession = sessionmaker(bind=engine)
     session = DBSession()
 
-    new_locale = Locale(airport_icao="KJFK", city="New York", state="NY",
-                        time_zone="EDT")
-    session.add(new_locale)
-    session.commit()
-
-    new_observation = Observation(time_local=datetime.now(),
-                                  date_utc=datetime.now(), temperature_f=55.5,
-                                  dew_point_f=55.5, relative_humidity=55.5,
-                                  sea_level_pressure_in=55.5,
-                                  visibility_miles=55.5, wind_direction=55.5,
-                                  wind_speed_mph=55.5, gust_speed_mph=55.5,
-                                  precipitation_in=55.5, events="Thunderstorm",
-                                  conditions="Scattered Clouds",
-                                  wind_dir_degrees=55.5, locale=new_locale)
-    session.add(new_observation)
-    session.commit()
+    loc_obsvns = []
+    csvd = os.path.normpath("./csv-tmp")
+    for d in os.listdir(csvd):
+        airport_icao = d
+        new_loc = Locale(airport_icao=airport_icao)
+        session.add(new_loc)
+        session.commit()
+        del loc_obsvns[:]
+        for f in os.listdir(os.path.join(csvd, d)):
+            date_local = f[:-4]
+            with open(os.path.join(csvd, d, f)) as csvfile:
+                reader = csv.reader(csvfile)
+                for row in reader:
+                    if "Time" in row[0]:
+                        continue
+                    loc_obsvns.append([" ".join((date_local, row[0]))] +
+                                      [col for col in row[1:]])
+        engine.execute(
+            Observation.__table__.insert(),
+            [{"datetime_local": datetime.strptime(row[0], "%Y-%m-%d %I:%M %p"),
+              "temperature_f": validate(row[1], float),
+              "dew_point_f": validate(row[2], float),
+              "relative_humidity": validate(row[3], float),
+              "sea_level_pressure_in": validate(row[4], float),
+              "visibility_miles": validate(row[5], float),
+              "wind_direction": validate(row[6], str),
+              "wind_speed_mph": validate(row[7], float),
+              "gust_speed_mph": validate(row[8], float),
+              "precipitation_in": validate(row[9], float),
+              "events": validate(row[10], str),
+              "conditions": validate(row[11], str),
+              "wind_dir_degrees": validate(row[12], float),
+              "datetime_utc": datetime.strptime(row[13], "%Y-%m-%d %H:%M:%S")}
+             for row in loc_obsvns]
+        )
 
 if __name__ == "__main__":
     main()
