@@ -12,16 +12,15 @@ class Locale(Base):
     __tablename__ = "locales"
     id = Column(Integer, primary_key=True)
     airport_icao = Column(String(4), index=True, nullable=False, unique=True)
-    city = Column(String(32), nullable=False)
-    state = Column(String(2), nullable=False)
-    time_zone = Column(String(3), nullable=False)
+    city = Column(String(32))
+    state = Column(String(2))
+    time_zone = Column(String(3))
 
 
 class Observation(Base):
     __tablename__ = "observations"
     id = Column(Integer, primary_key=True)
-    date_local = Column(DateTime, index=True, nullable=False, unique=True)
-    time_local = Column(DateTime, nullable=False)
+    datetime_local = Column(DateTime, index=True, nullable=False, unique=True)
     temperature_f = Column(Float)
     dew_point_f = Column(Float)
     relative_humidity = Column(Float)
