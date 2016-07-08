@@ -20,8 +20,9 @@ class Locale(Base):
 class Observation(Base):
     __tablename__ = "observations"
     id = Column(Integer, primary_key=True)
+    date_local = Column(DateTime, index=True, nullable=False, unique=True)
     time_local = Column(DateTime, nullable=False)
-    date_utc = Column(DateTime, nullable=False)
+    datetime_utc = Column(DateTime, nullable=False)
     temperature_f = Column(Float)
     dew_point_f = Column(Float)
     relative_humidity = Column(Float)
