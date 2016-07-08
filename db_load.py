@@ -5,7 +5,6 @@ import csv
 import os
 from datetime import datetime
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 
 from wu import Base, Locale, Observation
 
@@ -24,32 +23,32 @@ def validate(v, t):
 
 
 def main():
-    engine = create_engine("sqlite:///wu-tang.db")
+    engine = create_engine("sqlite:///wu-tang.db", echo=False)
+    Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
     Base.metadata.bind = engine
-    DBSession = sessionmaker(bind=engine)
-    session = DBSession()
 
     loc_obsvns = []
     csvd = os.path.normpath("./csv-tmp")
     for d in os.listdir(csvd):
         airport_icao = d
-        new_loc = Locale(airport_icao=airport_icao)
-        session.add(new_loc)
-        session.commit()
+        engine.execute(
+            Locale.__table__.insert(),
+            {"airport_icao": airport_icao}
+        )
         del loc_obsvns[:]
         for f in os.listdir(os.path.join(csvd, d)):
             date_local = f[:-4]
             with open(os.path.join(csvd, d, f)) as csvfile:
                 reader = csv.reader(csvfile)
+                time_zone = next(reader)[0][4:]
                 for row in reader:
-                    if "Time" in row[0]:
-                        continue
                     loc_obsvns.append([" ".join((date_local, row[0]))] +
                                       [col for col in row[1:]])
         engine.execute(
             Observation.__table__.insert(),
             [{"datetime_local": datetime.strptime(row[0], "%Y-%m-%d %I:%M %p"),
+              "time_zone": validate(time_zone, str),
               "temperature_f": validate(row[1], float),
               "dew_point_f": validate(row[2], float),
               "relative_humidity": validate(row[3], float),
