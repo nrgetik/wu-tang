@@ -14,13 +14,13 @@ class Locale(Base):
     airport_icao = Column(String, index=True, nullable=False, unique=True)
     city = Column(String)
     state = Column(String)
-    time_zone = Column(String)
 
 
 class Observation(Base):
     __tablename__ = "observations"
     id = Column(Integer, primary_key=True)
     datetime_local = Column(DateTime, index=True, nullable=False)
+    time_zone = Column(String)
     temperature_f = Column(Float)
     dew_point_f = Column(Float)
     relative_humidity = Column(Float)
