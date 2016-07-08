@@ -11,7 +11,7 @@ Base = declarative_base()
 class Locale(Base):
     __tablename__ = "locales"
     id = Column(Integer, primary_key=True)
-    airport_icao = Column(String, index=True, nullable=False)
+    airport_icao = Column(String, index=True, nullable=False, unique=True)
     city = Column(String)
     state = Column(String)
     time_zone = Column(String)
@@ -34,5 +34,6 @@ class Observation(Base):
     conditions = Column(String)
     wind_dir_degrees = Column(Integer)
     datetime_utc = Column(DateTime, nullable=False)
-    locale_id = Column(Integer, ForeignKey("locales.id"))
+    locale_airport_icao = Column(Integer, ForeignKey("locales.airport_icao"),
+                                 index=True, nullable=False)
     locale = relationship(Locale)
