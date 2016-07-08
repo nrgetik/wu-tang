@@ -62,7 +62,8 @@ def main():
               "events": validate(row[10], str),
               "conditions": validate(row[11], str),
               "wind_dir_degrees": validate(row[12], float),
-              "datetime_utc": datetime.strptime(row[13], "%Y-%m-%d %H:%M:%S")}
+              "datetime_utc": datetime.strptime(row[13], "%Y-%m-%d %H:%M:%S"),
+              "locale_airport_icao": airport_icao}
              for row in loc_obsvns]
         )
 
