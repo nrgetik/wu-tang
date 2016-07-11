@@ -29,7 +29,7 @@ def main():
     Base.metadata.bind = engine
 
     loc_obsvns = []
-    csvd = os.path.normpath("./wg-csv")
+    csvd = os.path.normpath("./wg-csv.1")
     for d in os.listdir(csvd):
         airport_icao = d
         engine.execute(
@@ -55,8 +55,8 @@ def main():
               # "sea_level_pressure_in": validate(row[4], float),
               "visibility_miles": validate(row[5], float),
               # "wind_direction": validate(row[6], str),
-              # "wind_speed_mph": validate(row[7], float),
-              # "gust_speed_mph": validate(row[8], float),
+              "wind_speed_mph": validate(row[7], float),
+              "gust_speed_mph": validate(row[8], float),
               "precipitation_in": validate(row[9], float),
               "events": validate(row[10], str),
               "conditions": validate(row[11], str),
