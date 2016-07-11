@@ -11,8 +11,8 @@ locales.
 Limiting observations to (roughly) daytime/afternoon hours, the proposed
 methodology is:
 
-* Making a broad stroke first, calculate days with an average temperature
-  between 45°F and 95°F
+* Calculate days with a minimum temperature >= 42°F and a maximum temperature
+  <= 97°F
 * Subtract days with an average heat index >= 91°F (excludes
   dangerous/uncomfortable heat/humidity)
 * Subtract days with significant precipitation (excludes inconvenient rainfall)
