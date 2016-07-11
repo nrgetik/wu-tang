@@ -24,13 +24,12 @@ def validate(v, t):
 
 def main():
     engine = create_engine("sqlite:///wu-tang.db", echo=False)
-    Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
     Base.metadata.bind = engine
 
     loc_obsvns = []
     csvd = os.path.normpath("./wg-csv.1")
-    for d in os.listdir(csvd):
+    for d in sorted(os.listdir(csvd)):
         airport_icao = d
         engine.execute(
             Locale.__table__.insert(),
