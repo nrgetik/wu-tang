@@ -8,7 +8,7 @@ corresponding cities, in an effort to rank atmospheric "niceness" amongst these
 locales.
 
 ## specification
-Limiting observations to (roughly) daytime/afternoon hours, the proposed
+Limiting observations to roughly daytime/afternoon hours (1200-1800), the proposed
 methodology is:
 
 * Calculate days with a minimum temperature >= 42°F and a maximum temperature
