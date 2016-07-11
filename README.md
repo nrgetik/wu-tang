@@ -16,13 +16,10 @@ methodology is:
 * Subtract days with an average heat index >= 91°F (controls for
   dangerous/uncomfortable heat/humidity)
 * Subtract days with significant precipitation (controls for inconvenient
-  rainfall)
+  rain/snow fall)
 * Subtract days with significant cloud cover (controls for dreariness)
 * Subtract days with low visibility (controls for haze/smog)
 * Factor in wind speed according to Beaufort scale
-
-Snow fall/cover will not be considered as both should be irrelevant as a
-consequence of the existing parameters.
 
 ## disclaimer
 This software is not in any way associated with the commercial weather service
