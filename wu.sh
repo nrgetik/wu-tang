@@ -18,9 +18,9 @@ do
             | sed 's/\-/ /g' \
             | awk '{printf("https://www.wunderground.com/history/airport/%s/%d/%d/%d/DailyHistory.html?format=1\n", $1, $2, $3, $4)}'`
         echo -n "$airport on $dt... "
-        if [[ ! -f wg-csv/$airport/$dt.csv ]]
+        if [[ ! -f wg-csv/$airport/$dt.csv ]] || [[ ! -s wg-csv/$airport/$dt.csv ]]
         then
-            sleep 0.125
+            sleep 0.25
             curl -s $URL | sed '/./,$!d' | sed 's/<br \/>$//g' > wg-csv/$airport/$dt.csv
             if grep -q "No daily or hourly history data available" \
                 wg-csv/$airport/$dt.csv
