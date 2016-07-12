@@ -37,7 +37,7 @@ def calc_heat_index(t, rh):
 def validate_field(v, t):
     if t == float:
         try:
-            return float(v)
+            return round(float(v), 2)
         except ValueError:
             return None
     if t == str:
@@ -74,28 +74,30 @@ def main():
             obs[2] = validate_field(obs[2], float)
             obs[3] = validate_field(obs[3], float)
             if obs[1] and obs[2] and not obs[3]:
-                obs[3] = calc_relative_humidity(obs[1], obs[2])
+                obs[3] = validate_field(calc_relative_humidity(obs[1], obs[2]),
+                                        float)
             if obs[1] and obs[3]:
-                obs.append(calc_heat_index(obs[1], obs[3]))
+                obs.append(validate_field(calc_heat_index(obs[1], obs[3]),
+                                          float))
             else:
                 obs.append(None)
         engine.execute(
             Observation.__table__.insert(),
             [{"datetime_local": datetime.strptime(row[0], "%Y-%m-%d %I:%M %p"),
               "time_zone": validate_field(time_zone, str),
-              "temperature_f": round(row[1], 2),
-              "dew_point_f": round(row[2], 2),
-              "relative_humidity": round(row[3], 2),
-              "heat_index": round(row[14], 2),
-              "sea_level_pressure_in": round(validate_field(row[4], float), 2),
-              "visibility_miles": round(validate_field(row[5], float), 2),
+              "temperature_f": row[1],
+              "dew_point_f": row[2],
+              "relative_humidity": row[3],
+              "heat_index": row[14],
+              "sea_level_pressure_in": validate_field(row[4], float),
+              "visibility_miles": validate_field(row[5], float),
               "wind_direction": validate_field(row[6], str),
-              "wind_speed_mph": round(validate_field(row[7], float), 2),
-              "gust_speed_mph": round(validate_field(row[8], float), 2),
-              "precipitation_in": round(validate_field(row[9], float), 2),
+              "wind_speed_mph": validate_field(row[7], float),
+              "gust_speed_mph": validate_field(row[8], float),
+              "precipitation_in": validate_field(row[9], float),
               "events": validate_field(row[10], str),
               "conditions": validate_field(row[11], str),
-              "wind_dir_degrees": round(validate_field(row[12], float), 2),
+              "wind_dir_degrees": validate_field(row[12], float),
               "datetime_utc": datetime.strptime(row[13], "%Y-%m-%d %H:%M:%S"),
               "locale_airport_icao": airport_icao}
              for row in loc_obsvns]
