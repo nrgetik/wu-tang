@@ -28,7 +28,7 @@ def main():
     Base.metadata.bind = engine
 
     loc_obsvns = []
-    csvd = os.path.normpath("./wg-csv.1")
+    csvd = os.path.normpath("./wg-csv")
     for d in sorted(os.listdir(csvd)):
         airport_icao = d
         engine.execute(
