@@ -12,7 +12,7 @@ Limiting observations to roughly daytime/afternoon hours (1200-1800), the propos
 methodology is:
 
 * Calculate days with a minimum temperature >= 42°F and a maximum temperature
-  <= 98°F
+  < 98°F
 * Subtract days with an average heat index >= 91°F (controls for
   dangerous/uncomfortable heat/humidity)
 * Subtract days with significant precipitation (controls for inconvenient
