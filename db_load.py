@@ -88,7 +88,7 @@ def main():
               "temperature_f": row[1],
               "dew_point_f": row[2],
               "relative_humidity": row[3],
-              "heat_index": row[14],
+              "heat_index_f": row[14],
               "sea_level_pressure_in": validate_field(row[4], float),
               "visibility_miles": validate_field(row[5], float),
               "wind_direction": validate_field(row[6], str),

@@ -24,7 +24,7 @@ class Observation(Base):
     temperature_f = Column(Float)
     dew_point_f = Column(Float)
     relative_humidity = Column(Float)
-    heat_index = Column(Float)
+    heat_index_f = Column(Float)
     sea_level_pressure_in = Column(Float)
     visibility_miles = Column(Float)
     wind_direction = Column(String)
