@@ -60,9 +60,16 @@ def main():
     csvd = os.path.normpath("./wg-csv")
     for d in sorted(os.listdir(csvd)):
         airport_icao = d
+        with open("./airport-city-state.csv") as f:
+            lines = f.readlines()
+            line = [i for i, s in enumerate(lines) if airport_icao in s][0]
+            city = lines[line].split(",")[1].strip()
+            state = lines[line].split(",")[2].strip()
         engine.execute(
             Locale.__table__.insert(),
-            {"airport_icao": airport_icao}
+            {"airport_icao": airport_icao,
+             "city": city,
+             "state": state}
         )
         del loc_obsvns[:]
         for f in os.listdir(os.path.join(csvd, d)):
