@@ -15,8 +15,7 @@ CREATE VIEW total AS
 SELECT locale_airport_icao, date(datetime_local) AS day, count(*) AS num
 FROM observations
 WHERE time(datetime_local) BETWEEN time('12:00:00') AND time('18:00:00') AND
-temperature_f IS NOT NULL and heat_index_f IS NOT NULL AND conditions NOT IN
-('Unknown')
+temperature_f IS NOT NULL and heat_index_f IS NOT NULL
 GROUP BY locale_airport_icao, day
 ORDER BY locale_airport_icao, day DESC;
 
