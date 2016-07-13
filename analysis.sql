@@ -1,7 +1,30 @@
-create view filtered as select locale_airport_icao, date(datetime_local) as day, count(*) as num from observations where time(datetime_local) between time('12:00:00') and time('18:00:00') and (temperature_f is not null and temperature_f >= 42) and (heat_index_f is not null and heat_index_f <= 91) and conditions in ("Clear", "Scattered Clouds", "Partly Cloudy", "Unknown") and (precipitation_in <= 0.1 or precipitation_in is null) and events is null group by locale_airport_icao, day order by locale_airport_icao, day desc;
+CREATE VIEW filtered AS
+SELECT locale_airport_icao, date(datetime_local) AS day, count(*) AS num
+FROM observations
+WHERE time(datetime_local) BETWEEN time('12:00:00') AND time('18:00:00') AND
+(temperature_f IS NOT NULL AND temperature_f >= 50.0) AND (heat_index_f IS NOT
+    NULL AND heat_index_f < 91.0) AND conditions IN ('Clear') AND
+(precipitation_in <= 0.1 OR precipitation_in IS NULL) AND events IS NULL
+GROUP BY locale_airport_icao, day
+ORDER BY locale_airport_icao, day DESC;
 
-create view total as select locale_airport_icao, date(datetime_local) as day, count(*) as num from observations where time(datetime_local) between time('12:00:00') and time('18:00:00') and temperature_f is not null and heat_index_f is not null group by locale_airport_icao, day order by locale_airport_icao, day desc;
+CREATE VIEW total AS
+SELECT locale_airport_icao, date(datetime_local) AS day, count(*) AS num
+FROM observations
+WHERE time(datetime_local) BETWEEN time('12:00:00') AND time('18:00:00') AND
+temperature_f IS NOT NULL and heat_index_f IS NOT NULL AND conditions NOT IN
+('Unknown')
+GROUP BY locale_airport_icao, day
+ORDER BY locale_airport_icao, day DESC;
 
-create view final as select filtered.locale_airport_icao, filtered.day, cast(filtered.num as float) / cast(total.num as float) as percent from filtered, total where filtered.locale_airport_icao = total.locale_airport_icao and filtered.day = total.day and percent >= 0.75;
+CREATE VIEW final AS
+SELECT filtered.locale_airport_icao, filtered.day, (cast(filtered.num AS float)
+    / cast(total.num AS float)) AS percent
+FROM filtered, total
+WHERE filtered.locale_airport_icao = total.locale_airport_icao AND filtered.day
+= total.day AND percent >= cast((2.0 / 3.0) AS float);
 
-select locale_airport_icao, count(*) as days from final group by locale_airport_icao order by days desc;
+SELECT locale_airport_icao, count(*) AS days
+FROM final
+GROUP BY locale_airport_icao
+ORDER BY days DESC;
