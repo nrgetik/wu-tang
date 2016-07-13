@@ -23,6 +23,8 @@ SELECT filtered.locale_airport_icao, filtered.day, (cast(filtered.num AS float)
 FROM filtered, total
 WHERE filtered.locale_airport_icao = total.locale_airport_icao AND filtered.day
 = total.day AND percent >= cast((2.0 / 3.0) AS float);
+GROUP BY filtered.locale_airport_icao, filtered.day
+ORDER BY filtered.locale_airport_icao, filtered.day DESC;
 
 SELECT locale_airport_icao, count(*) AS days
 FROM final
