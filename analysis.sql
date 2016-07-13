@@ -26,7 +26,7 @@ SELECT filtered.locale_airport_icao, filtered.day, (cast(filtered.num AS float)
     / cast(total.num AS float)) AS percent
 FROM filtered, total
 WHERE filtered.locale_airport_icao = total.locale_airport_icao AND filtered.day
-= total.day AND percent >= cast((3.0 / 4.0) AS float)
+= total.day AND percent >= cast((2.0 / 3.0) AS float)
 GROUP BY filtered.locale_airport_icao, filtered.day
 ORDER BY filtered.locale_airport_icao, filtered.day DESC;
 
