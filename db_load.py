@@ -37,7 +37,11 @@ def calc_heat_index(t, rh):
 def validate_field(v, t):
     if t == float:
         try:
-            return round(float(v), 2)
+            val = round(float(v), 2)
+            if val != -9999.0:
+                return val
+            else:
+                return None
         except ValueError:
             return None
     if t == str:
