@@ -5,7 +5,7 @@
 # If years is not provided as an argument, a default value of 1 is used.
 YEARS=${1:-1}
 
-for airport in `cat airports.txt`
+for airport in `cut -d , -f 1 airport-city-state.csv | tail -n +2`
 do
     mkdir -pv wg-csv/$airport
     for dt in `python -c "from datetime import datetime, timedelta; \
