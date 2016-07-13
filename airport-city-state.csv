@@ -1,8 +1,8 @@
 ICAO,City,State
 KABE,Allentown,Pennsylvania
 KABI,Abilene,Texas
-KABQ,Albuquerque,New mexico
-KABR,Aberdeen,South dakota
+KABQ,Albuquerque,New Mexico
+KABR,Aberdeen,South Dakota
 KABY,Albany,Georgia
 KACK,Nantucket,Massachusetts
 KACT,Waco,Texas
@@ -10,29 +10,29 @@ KACV,Arcata/Eureka,California
 KACY,Atlantic City,New jersey
 KAEX,Alexandria,Louisiana
 KAGS,Augusta,Georgia
-KALB,Albany,New york
+KALB,Albany,New York
 KALO,Waterloo,Iowa
 KALW,Walla Walla,Washington
 KAMA,Amarillo,Texas
 KAPN,Alpena,Michigan
-KART,Watertown,New york
+KART,Watertown,New York
 KASE,Aspen,Colorado
 KATL,Atlanta,Georgia
 KATW,Appleton,Wisconsin
 KAUS,Austin,Texas
-KAVL,Asheville,North carolina
+KAVL,Asheville,North Carolina
 KAVP,Wilkes-Barre/Scranton,Pennsylvania
 KAZO,Kalamazoo/Battle Creek,Michigan
 KBDL,Hartford,Connecticut
 KBFF,Scottsbluff,Nebraska
 KBFI,Seattle,Washington
 KBFL,Bakersfield,California
-KBGM,Binghamton,New york
+KBGM,Binghamton,New York
 KBGR,Bangor,Maine
 KBHB,Bar Harbor,Maine
 KBHM,Birmingham,Alabama
 KBIL,Billings,Montana
-KBIS,Bismarck,North dakota
+KBIS,Bismarck,North Dakota
 KBJI,Bemidji,Minnesota
 KBLI,Bellingham,Washington
 KBLV,Belleville,Illinois
@@ -47,17 +47,17 @@ KBRO,Brownsville,Texas
 KBTM,Butte,Montana
 KBTR,Baton Rouge,Louisiana
 KBTV,Burlington,Vermont
-KBUF,Buffalo,New york
+KBUF,Buffalo,New York
 KBUR,Burbank,California
 KBVU,Boulder City,Nevada
 KBWI,Baltimore/Glen Burnie,Maryland
 KBZN,Bozeman,Montana
-KCAE,Columbia,South carolina
+KCAE,Columbia,South Carolina
 KCAK,Akron/Canton,Ohio
 KCEC,Crescent City,California
 KCHA,Chattanooga,Tennessee
 KCHO,Charlottesville,Virginia
-KCHS,Charleston,South carolina
+KCHS,Charleston,South Carolina
 KCIC,Chico,California
 KCID,Cedar Rapids,Iowa
 KCIU,Sault Ste. Marie,Michigan
@@ -65,7 +65,7 @@ KCKB,Clarksburg,West virginia
 KCLE,Cleveland,Ohio
 KCLL,College Station,Texas
 KCLM,Port Angeles,Washington
-KCLT,Charlotte,North carolina
+KCLT,Charlotte,North Carolina
 KCMH,Columbus,Ohio
 KCMI,Champaign/Urbana,Illinois
 KCMX,Hancock/Calumet,Michigan
@@ -85,11 +85,11 @@ KDAB,Daytona Beach,Florida
 KDAL,Dallas,Texas
 KDAY,Dayton,Ohio
 KDBQ,Dubuque,Iowa
-KDCA,"Washington, D.C./Arlington County",Virginia
+KDCA,Washington, D.C./Arlington County,Virginia
 KDEN,Denver,Colorado
 KDFW,Dallas-Fort Worth,Texas
 KDHN,Dothan,Alabama
-KDIK,Dickinson,North dakota
+KDIK,Dickinson,North Dakota
 KDLH,Duluth,Minnesota
 KDRO,Durango,Colorado
 KDRT,Del Rio,Texas
@@ -101,33 +101,33 @@ KEAU,Eau Claire,Wisconsin
 KECP,Panama City Beach,Florida
 KEGE,Eagle,Colorado
 KEKO,Elko,Nevada
-KELM,Elmira/Corning,New york
+KELM,Elmira/Corning,New York
 KELP,El Paso,Texas
 KENV,Wendover,Utah
 KERI,Erie,Pennsylvania
 KESC,Escanaba,Michigan
 KEUG,Eugene,Oregon
 KEVV,Evansville,Indiana
-KEWN,New Bern,North carolina
+KEWN,New Bern,North Carolina
 KEWR,Newark,New jersey
 KEYW,Key West,Florida
-KFAR,Fargo,North dakota
+KFAR,Fargo,North Dakota
 KFAT,Fresno,California
-KFAY,Fayetteville,North carolina
+KFAY,Fayetteville,North Carolina
 KFHR,Friday Harbor,Washington
 KFLG,Flagstaff,Arizona
 KFLL,Fort Lauderdale,Florida
-KFLO,Florence,South carolina
-KFMN,Farmington,New mexico
+KFLO,Florence,South Carolina
+KFMN,Farmington,New Mexico
 KFNT,Flint,Michigan
-KFSD,Sioux Falls,South dakota
+KFSD,Sioux Falls,South Dakota
 KFSM,Fort Smith,Arkansas
 KFWA,Fort Wayne,Indiana
 KGCC,Gillette,Wyoming
 KGCK,Garden City,Kansas
 KGCN,Grand Canyon/Tusayan,Arizona
 KGEG,Spokane,Washington
-KGFK,Grand Forks,North dakota
+KGFK,Grand Forks,North Dakota
 KGGG,Longview,Texas
 KGJT,Grand Junction,Colorado
 KGNV,Gainesville,Florida
@@ -137,8 +137,8 @@ KGRB,Green Bay,Wisconsin
 KGRI,Grand Island,Nebraska
 KGRK,Fort Hood/Killeen/Temple,Texas
 KGRR,Grand Rapids,Michigan
-KGSO,Greensboro,North carolina
-KGSP,Greer,South carolina
+KGSO,Greensboro,North Carolina
+KGSP,Greer,South Carolina
 KGTF,Great Falls,Montana
 KGTR,Columbus/West Point/Starkville,Mississippi
 KGUC,Gunnison,Colorado
@@ -146,34 +146,34 @@ KHDN,Hayden,Colorado
 KHGR,Hagerstown,Maryland
 KHIB,Hibbing,Minnesota
 KHLN,Helena,Montana
-KHOB,Hobbs,New mexico
+KHOB,Hobbs,New Mexico
 KHOU,Houston,Texas
-KHPN,White Plains,New york
+KHPN,White Plains,New York
 KHRL,Harlingen,Texas
 KHSV,Huntsville,Alabama
 KHTS,Huntington,West virginia
 KHVN,New Haven,Connecticut
-KHXD,Hilton Head Island,South carolina
+KHXD,Hilton Head Island,South Carolina
 KHYA,Hyannis,Massachusetts
-KIAD,"Washington, D.C./Dulles/Chantilly",Virginia
-KIAG,Niagara Falls,New york
+KIAD,Washington, D.C./Dulles/Chantilly,Virginia
+KIAG,Niagara Falls,New York
 KIAH,Houston,Texas
 KICT,Wichita,Kansas
 KIDA,Idaho Falls,Idaho
 KIFP,Bullhead City,Arizona
-KILM,Wilmington,North carolina
+KILM,Wilmington,North Carolina
 KIMT,Iron Mountain/Kingsford,Michigan
 KIND,Indianapolis,Indiana
 KINL,International Falls,Minnesota
 KIPT,Williamsport,Pennsylvania
-KISN,Williston,North dakota
-KISP,Islip,New york
-KITH,Ithaca,New york
+KISN,Williston,North Dakota
+KISP,Islip,New York
+KITH,Ithaca,New York
 KIWA,Mesa,Arizona
 KJAC,Jackson,Wyoming
 KJAN,Jackson,Mississippi
 KJAX,Jacksonville,Florida
-KJFK,New York,New york
+KJFK,New York,New York
 KJLN,Joplin,Missouri
 KLAN,Lansing,Michigan
 KLAR,Laramie,Wyoming
@@ -184,10 +184,10 @@ KLBB,Lubbock,Texas
 KLBE,Latrobe,Pennsylvania
 KLCH,Lake Charles,Louisiana
 KLCK,Columbus,Ohio
-KLEB,Lebanon,New hampshire
+KLEB,Lebanon,New Hampshire
 KLEX,Lexington,Kentucky
 KLFT,Lafayette,Louisiana
-KLGA,New York,New york
+KLGA,New York,New York
 KLGB,Long Beach,California
 KLIT,Little Rock,Arkansas
 KLMT,Klamath Falls,Oregon
@@ -208,9 +208,9 @@ KMEM,Memphis,Tennessee
 KMFE,McAllen,Texas
 KMFR,Medford,Oregon
 KMGM,Montgomery,Alabama
-KMGW,Morgantown,West virginia
+KMGW,Morgantown,West Virginia
 KMHK,Manhattan,Kansas
-KMHT,Manchester,New hampshire
+KMHT,Manchester,New Hampshire
 KMIA,Miami,Florida
 KMKE,Milwaukee,Wisconsin
 KMKG,Muskegon,Michigan
@@ -220,7 +220,7 @@ KMLU,Monroe,Louisiana
 KMMH,Mammoth Lakes,California
 KMOB,Mobile,Alabama
 KMOD,Modesto,California
-KMOT,Minot,North dakota
+KMOT,Minot,North Dakota
 KMRY,Monterey,California
 KMSN,Madison,Wisconsin
 KMSO,Missoula,Montana
@@ -229,9 +229,9 @@ KMSY,New Orleans,Louisiana
 KMTJ,Montrose,Colorado
 KMVY,Vineyard Haven,Massachusetts
 KMWA,Marion,Illinois
-KMYR,Myrtle Beach,South carolina
+KMYR,Myrtle Beach,South Carolina
 KNYL,Yuma,Arizona
-KOAJ,Jacksonville,North carolina
+KOAJ,Jacksonville,North Carolina
 KOAK,Oakland,California
 KOKC,Oklahoma City,Oklahoma
 KOMA,Omaha,Nebraska
@@ -242,12 +242,12 @@ KORH,Worcester,Massachusetts
 KOTH,North Bend,Oregon
 KOWB,Owensboro,Kentucky
 KPAH,Paducah,Kentucky
-KPBG,Plattsburgh,New york
+KPBG,Plattsburgh,New York
 KPBI,West Palm Beach,Florida
 KPDX,Portland,Oregon
 KPGA,Page,Arizona
 KPGD,Punta Gorda,Florida
-KPGV,Greenville,North carolina
+KPGV,Greenville,North Carolina
 KPHF,Newport News,Virginia
 KPHL,Philadelphia,Pennsylvania
 KPHX,Phoenix,Arizona
@@ -255,7 +255,7 @@ KPIA,Peoria,Illinois
 KPIB,Hattiesburg/Laurel,Mississippi
 KPIE,St. Petersburg/Clearwater,Florida
 KPIH,Pocatello/Arbon Valley,Idaho
-KPIR,Pierre,South dakota
+KPIR,Pierre,South Dakota
 KPIT,Pittsburgh,Pennsylvania
 KPLN,Pellston,Michigan
 KPNS,Pensacola,Florida
@@ -267,10 +267,10 @@ KPVC,Provincetown,Massachusetts
 KPVD,Providence/Warwick,Rhode island
 KPVU,Provo,Utah
 KPWM,Portland,Maine
-KRAP,Rapid City,South dakota
+KRAP,Rapid City,South Dakota
 KRDD,Redding,California
 KRDM,Redmond,Oregon
-KRDU,Raleigh,North carolina
+KRDU,Raleigh,North Carolina
 KRFD,Rockford,Illinois
 KRHI,Rhinelander,Wisconsin
 KRIC,Richmond,Virginia
@@ -279,11 +279,11 @@ KRKD,Rockland,Maine
 KRKS,Rock Springs,Wyoming
 KRNO,Reno,Nevada
 KROA,Roanoke,Virginia
-KROC,Rochester,New york
-KROW,Roswell,New mexico
+KROC,Rochester,New York
+KROW,Roswell,New Mexico
 KRST,Rochester,Minnesota
 KRSW,Fort Myers,Florida
-KSAF,Santa Fe,New mexico
+KSAF,Santa Fe,New Mexico
 KSAN,San Diego,California
 KSAT,San Antonio,Texas
 KSAV,Savannah,Georgia
@@ -317,13 +317,13 @@ KSTL,St. Louis,Missouri
 KSTS,Santa Rosa,California
 KSUN,Hailey,Idaho
 KSUX,Sioux City,Iowa
-KSWF,Newburgh,New york
-KSYR,Syracuse,New york
+KSWF,Newburgh,New York
+KSYR,Syracuse,New York
 KTLH,Tallahassee,Florida
 KTOL,Toledo,Ohio
 KTPA,Tampa,Florida
 KTRI,Bristol/Johnson City/Kingsport,Tennessee
-KTTN,Trenton,New jersey
+KTTN,Trenton,New Jersey
 KTUL,Tulsa,Oklahoma
 KTUS,Tucson,Arizona
 KTVC,Traverse City,Michigan
