@@ -1,0 +1,341 @@
+ICAO,City,State
+KABE,Allentown,Pennsylvania
+KABI,Abilene,Texas
+KABQ,Albuquerque,New mexico
+KABR,Aberdeen,South dakota
+KABY,Albany,Georgia
+KACK,Nantucket,Massachusetts
+KACT,Waco,Texas
+KACV,Arcata/Eureka,California
+KACY,Atlantic City,New jersey
+KAEX,Alexandria,Louisiana
+KAGS,Augusta,Georgia
+KALB,Albany,New york
+KALO,Waterloo,Iowa
+KALW,Walla Walla,Washington
+KAMA,Amarillo,Texas
+KAPN,Alpena,Michigan
+KART,Watertown,New york
+KASE,Aspen,Colorado
+KATL,Atlanta,Georgia
+KATW,Appleton,Wisconsin
+KAUS,Austin,Texas
+KAVL,Asheville,North carolina
+KAVP,Wilkes-Barre/Scranton,Pennsylvania
+KAZO,Kalamazoo/Battle Creek,Michigan
+KBDL,Hartford,Connecticut
+KBFF,Scottsbluff,Nebraska
+KBFI,Seattle,Washington
+KBFL,Bakersfield,California
+KBGM,Binghamton,New york
+KBGR,Bangor,Maine
+KBHB,Bar Harbor,Maine
+KBHM,Birmingham,Alabama
+KBIL,Billings,Montana
+KBIS,Bismarck,North dakota
+KBJI,Bemidji,Minnesota
+KBLI,Bellingham,Washington
+KBLV,Belleville,Illinois
+KBMI,Bloomington/Normal,Illinois
+KBNA,Nashville,Tennessee
+KBOI,Boise,Idaho
+KBOS,Boston,Massachusetts
+KBPT,Beaumont/Port Arthur,Texas
+KBQK,Brunswick,Georgia
+KBRD,Brainerd,Minnesota
+KBRO,Brownsville,Texas
+KBTM,Butte,Montana
+KBTR,Baton Rouge,Louisiana
+KBTV,Burlington,Vermont
+KBUF,Buffalo,New york
+KBUR,Burbank,California
+KBVU,Boulder City,Nevada
+KBWI,Baltimore/Glen Burnie,Maryland
+KBZN,Bozeman,Montana
+KCAE,Columbia,South carolina
+KCAK,Akron/Canton,Ohio
+KCEC,Crescent City,California
+KCHA,Chattanooga,Tennessee
+KCHO,Charlottesville,Virginia
+KCHS,Charleston,South carolina
+KCIC,Chico,California
+KCID,Cedar Rapids,Iowa
+KCIU,Sault Ste. Marie,Michigan
+KCKB,Clarksburg,West virginia
+KCLE,Cleveland,Ohio
+KCLL,College Station,Texas
+KCLM,Port Angeles,Washington
+KCLT,Charlotte,North carolina
+KCMH,Columbus,Ohio
+KCMI,Champaign/Urbana,Illinois
+KCMX,Hancock/Calumet,Michigan
+KCOD,Cody,Wyoming
+KCOS,Colorado Springs,Colorado
+KCOU,Columbia,Missouri
+KCPR,Casper,Wyoming
+KCRP,Corpus Christi/Kingsville,Texas
+KCRQ,Carlsbad,California
+KCRW,Charleston,West virginia
+KCSG,Columbus,Georgia
+KCVG,Covington,Kentucky
+KCVX,Charlevoix,Michigan
+KCWA,Wausau,Wisconsin
+KCYS,Cheyenne,Wyoming
+KDAB,Daytona Beach,Florida
+KDAL,Dallas,Texas
+KDAY,Dayton,Ohio
+KDBQ,Dubuque,Iowa
+KDCA,"Washington, D.C./Arlington County",Virginia
+KDEN,Denver,Colorado
+KDFW,Dallas-Fort Worth,Texas
+KDHN,Dothan,Alabama
+KDIK,Dickinson,North dakota
+KDLH,Duluth,Minnesota
+KDRO,Durango,Colorado
+KDRT,Del Rio,Texas
+KDSM,Des Moines,Iowa
+KDTW,Detroit/Romulus,Michigan
+KEAR,Kearney,Nebraska
+KEAT,Wenatchee,Washington
+KEAU,Eau Claire,Wisconsin
+KECP,Panama City Beach,Florida
+KEGE,Eagle,Colorado
+KEKO,Elko,Nevada
+KELM,Elmira/Corning,New york
+KELP,El Paso,Texas
+KENV,Wendover,Utah
+KERI,Erie,Pennsylvania
+KESC,Escanaba,Michigan
+KEUG,Eugene,Oregon
+KEVV,Evansville,Indiana
+KEWN,New Bern,North carolina
+KEWR,Newark,New jersey
+KEYW,Key West,Florida
+KFAR,Fargo,North dakota
+KFAT,Fresno,California
+KFAY,Fayetteville,North carolina
+KFHR,Friday Harbor,Washington
+KFLG,Flagstaff,Arizona
+KFLL,Fort Lauderdale,Florida
+KFLO,Florence,South carolina
+KFMN,Farmington,New mexico
+KFNT,Flint,Michigan
+KFSD,Sioux Falls,South dakota
+KFSM,Fort Smith,Arkansas
+KFWA,Fort Wayne,Indiana
+KGCC,Gillette,Wyoming
+KGCK,Garden City,Kansas
+KGCN,Grand Canyon/Tusayan,Arizona
+KGEG,Spokane,Washington
+KGFK,Grand Forks,North dakota
+KGGG,Longview,Texas
+KGJT,Grand Junction,Colorado
+KGNV,Gainesville,Florida
+KGPI,Kalispell,Montana
+KGPT,Gulfport/Biloxi,Mississippi
+KGRB,Green Bay,Wisconsin
+KGRI,Grand Island,Nebraska
+KGRK,Fort Hood/Killeen/Temple,Texas
+KGRR,Grand Rapids,Michigan
+KGSO,Greensboro,North carolina
+KGSP,Greer,South carolina
+KGTF,Great Falls,Montana
+KGTR,Columbus/West Point/Starkville,Mississippi
+KGUC,Gunnison,Colorado
+KHDN,Hayden,Colorado
+KHGR,Hagerstown,Maryland
+KHIB,Hibbing,Minnesota
+KHLN,Helena,Montana
+KHOB,Hobbs,New mexico
+KHOU,Houston,Texas
+KHPN,White Plains,New york
+KHRL,Harlingen,Texas
+KHSV,Huntsville,Alabama
+KHTS,Huntington,West virginia
+KHVN,New Haven,Connecticut
+KHXD,Hilton Head Island,South carolina
+KHYA,Hyannis,Massachusetts
+KIAD,"Washington, D.C./Dulles/Chantilly",Virginia
+KIAG,Niagara Falls,New york
+KIAH,Houston,Texas
+KICT,Wichita,Kansas
+KIDA,Idaho Falls,Idaho
+KIFP,Bullhead City,Arizona
+KILM,Wilmington,North carolina
+KIMT,Iron Mountain/Kingsford,Michigan
+KIND,Indianapolis,Indiana
+KINL,International Falls,Minnesota
+KIPT,Williamsport,Pennsylvania
+KISN,Williston,North dakota
+KISP,Islip,New york
+KITH,Ithaca,New york
+KIWA,Mesa,Arizona
+KJAC,Jackson,Wyoming
+KJAN,Jackson,Mississippi
+KJAX,Jacksonville,Florida
+KJFK,New York,New york
+KJLN,Joplin,Missouri
+KLAN,Lansing,Michigan
+KLAR,Laramie,Wyoming
+KLAS,Las Vegas,Nevada
+KLAW,Lawton,Oklahoma
+KLAX,Los Angeles,California
+KLBB,Lubbock,Texas
+KLBE,Latrobe,Pennsylvania
+KLCH,Lake Charles,Louisiana
+KLCK,Columbus,Ohio
+KLEB,Lebanon,New hampshire
+KLEX,Lexington,Kentucky
+KLFT,Lafayette,Louisiana
+KLGA,New York,New york
+KLGB,Long Beach,California
+KLIT,Little Rock,Arkansas
+KLMT,Klamath Falls,Oregon
+KLNK,Lincoln,Nebraska
+KLRD,Laredo,Texas
+KLSE,La Crosse,Wisconsin
+KLUK,Cincinnati,Ohio
+KLWB,Lewisburg,West virginia
+KLWS,Lewiston,Idaho
+KLYH,Lynchburg,Virginia
+KMAF,Midland,Texas
+KMBS,Saginaw,Michigan
+KMCI,Kansas City,Missouri
+KMCO,Orlando,Florida
+KMDT,Harrisburg/Middletown,Pennsylvania
+KMDW,Chicago,Illinois
+KMEM,Memphis,Tennessee
+KMFE,McAllen,Texas
+KMFR,Medford,Oregon
+KMGM,Montgomery,Alabama
+KMGW,Morgantown,West virginia
+KMHK,Manhattan,Kansas
+KMHT,Manchester,New hampshire
+KMIA,Miami,Florida
+KMKE,Milwaukee,Wisconsin
+KMKG,Muskegon,Michigan
+KMLB,Melbourne,Florida
+KMLI,Moline,Illinois
+KMLU,Monroe,Louisiana
+KMMH,Mammoth Lakes,California
+KMOB,Mobile,Alabama
+KMOD,Modesto,California
+KMOT,Minot,North dakota
+KMRY,Monterey,California
+KMSN,Madison,Wisconsin
+KMSO,Missoula,Montana
+KMSP,Minneapolis,Minnesota
+KMSY,New Orleans,Louisiana
+KMTJ,Montrose,Colorado
+KMVY,Vineyard Haven,Massachusetts
+KMWA,Marion,Illinois
+KMYR,Myrtle Beach,South carolina
+KNYL,Yuma,Arizona
+KOAJ,Jacksonville,North carolina
+KOAK,Oakland,California
+KOKC,Oklahoma City,Oklahoma
+KOMA,Omaha,Nebraska
+KONT,Ontario,California
+KORD,Chicago,Illinois
+KORF,Norfolk,Virginia
+KORH,Worcester,Massachusetts
+KOTH,North Bend,Oregon
+KOWB,Owensboro,Kentucky
+KPAH,Paducah,Kentucky
+KPBG,Plattsburgh,New york
+KPBI,West Palm Beach,Florida
+KPDX,Portland,Oregon
+KPGA,Page,Arizona
+KPGD,Punta Gorda,Florida
+KPGV,Greenville,North carolina
+KPHF,Newport News,Virginia
+KPHL,Philadelphia,Pennsylvania
+KPHX,Phoenix,Arizona
+KPIA,Peoria,Illinois
+KPIB,Hattiesburg/Laurel,Mississippi
+KPIE,St. Petersburg/Clearwater,Florida
+KPIH,Pocatello/Arbon Valley,Idaho
+KPIR,Pierre,South dakota
+KPIT,Pittsburgh,Pennsylvania
+KPLN,Pellston,Michigan
+KPNS,Pensacola,Florida
+KPQI,Presque Isle,Maine
+KPSC,Pasco,Washington
+KPSP,Palm Springs,California
+KPUW,"Pullman/Moscow, Idaho",Washington
+KPVC,Provincetown,Massachusetts
+KPVD,Providence/Warwick,Rhode island
+KPVU,Provo,Utah
+KPWM,Portland,Maine
+KRAP,Rapid City,South dakota
+KRDD,Redding,California
+KRDM,Redmond,Oregon
+KRDU,Raleigh,North carolina
+KRFD,Rockford,Illinois
+KRHI,Rhinelander,Wisconsin
+KRIC,Richmond,Virginia
+KRIW,Riverton,Wyoming
+KRKD,Rockland,Maine
+KRKS,Rock Springs,Wyoming
+KRNO,Reno,Nevada
+KROA,Roanoke,Virginia
+KROC,Rochester,New york
+KROW,Roswell,New mexico
+KRST,Rochester,Minnesota
+KRSW,Fort Myers,Florida
+KSAF,Santa Fe,New mexico
+KSAN,San Diego,California
+KSAT,San Antonio,Texas
+KSAV,Savannah,Georgia
+KSAW,Marquette/Gwinn,Michigan
+KSBA,Santa Barbara,California
+KSBN,South Bend,Indiana
+KSBP,San Luis Obispo,California
+KSBY,Salisbury,Maryland
+KSCK,Stockton,California
+KSDF,Louisville,Kentucky
+KSEA,Seattle/Tacoma(SeaTac),Washington
+KSFB,Orlando/Sanford,Florida
+KSFO,San Francisco,California
+KSGF,Springfield,Missouri
+KSGJ,St. Augustine,Florida
+KSGU,St. George/Beaver,Utah
+KSHD,Staunton/Waynesboro/Harrisonburg,Virginia
+KSHR,Sheridan,Wyoming
+KSHV,Shreveport,Louisiana
+KSJC,San Jose,California
+KSJT,San Angelo,Texas
+KSLC,Salt Lake City,Utah
+KSMF,Sacramento,California
+KSMX,Santa Maria,California
+KSNA,Santa Ana,California
+KSPI,Springfield,Illinois
+KSPS,Wichita Falls,Texas
+KSRQ,Sarasota/Bradenton,Florida
+KSTC,St. Cloud,Minnesota
+KSTL,St. Louis,Missouri
+KSTS,Santa Rosa,California
+KSUN,Hailey,Idaho
+KSUX,Sioux City,Iowa
+KSWF,Newburgh,New york
+KSYR,Syracuse,New york
+KTLH,Tallahassee,Florida
+KTOL,Toledo,Ohio
+KTPA,Tampa,Florida
+KTRI,Bristol/Johnson City/Kingsport,Tennessee
+KTTN,Trenton,New jersey
+KTUL,Tulsa,Oklahoma
+KTUS,Tucson,Arizona
+KTVC,Traverse City,Michigan
+KTWF,Twin Falls,Idaho
+KTXK,Texarkana,Arkansas
+KTYR,Tyler,Texas
+KTYS,Knoxville,Tennessee
+KUIN,Quincy,Illinois
+KUNV,State College,Pennsylvania
+KVLD,Valdosta,Georgia
+KVPS,Valparaiso,Florida
+KWST,Westerly,Rhode island
+KXNA,Fayetteville,Arkansas
+KYKM,Yakima,Washington
+KYNG,Youngstown/Warren,Ohio
