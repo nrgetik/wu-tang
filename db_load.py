@@ -1,22 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import click
 import csv
 import os
 from datetime import datetime
-from math import exp
 from math import sqrt
 from sqlalchemy import create_engine
 
 from wu import Base, Locale, Observation
 
 
-def calc_relative_humidity(t, dp):
-    return 100 * (exp((17.625 * dp) / (243.04 + dp)) /
-                  exp((17.625 * t) / (243.04 + t)))
-
-
-def calc_heat_index(t, rh):
+def heat_index(t, rh):
     simple = 0.5 * (t + 61.0 + ((t - 68.0) * 1.2) + (rh * 0.094))
     if ((t + simple) / 2.0) < 80.0:
         return simple
@@ -34,7 +29,7 @@ def calc_heat_index(t, rh):
             return full
 
 
-def validate_field(v, t):
+def validate(v, t):
     if t == float:
         try:
             val = round(float(v), 2)
@@ -42,7 +37,7 @@ def validate_field(v, t):
                 return val
             else:
                 return None
-        except ValueError:
+        except (TypeError, ValueError):
             return None
     if t == str:
         if isinstance(v, str) and len(v) > 1 and "N/A" not in v:
@@ -51,10 +46,16 @@ def validate_field(v, t):
             return None
 
 
-def main():
-    engine = create_engine("sqlite:///wu-tang.db", echo=False)
+@click.command()
+@click.option("--path", default="wu-tang.db", help="Path to save DB file")
+@click.option("--years", default=1, help="Number of years to attempt to load")
+def main(path, years):
+    engine = create_engine("sqlite:///{path}".format(path=path), echo=False)
     Base.metadata.create_all(engine)
     Base.metadata.bind = engine
+
+    current_year = datetime.now().year
+    load_years = range(current_year - years, current_year)
 
     loc_obsvns = []
     csvd = os.path.normpath("./wg-csv")
@@ -73,42 +74,38 @@ def main():
         )
         del loc_obsvns[:]
         for f in os.listdir(os.path.join(csvd, d)):
+            if int(f[:4]) not in load_years:
+                continue
             date_local = f[:-4]
             with open(os.path.join(csvd, d, f)) as csvfile:
                 reader = csv.reader(csvfile)
                 time_zone = next(reader)[0][4:]
                 for row in reader:
+                    temp = validate(row[1], float)
+                    hmdy = validate(row[3], float)
+                    if temp and hmdy:
+                        row.append(heat_index(temp, hmdy))
+                    else:
+                        row.append(None)
                     loc_obsvns.append([" ".join((date_local, row[0]))] +
                                       [col for col in row[1:]])
-        for obs in loc_obsvns:
-            obs[1] = validate_field(obs[1], float)
-            obs[2] = validate_field(obs[2], float)
-            obs[3] = validate_field(obs[3], float)
-            if obs[1] and obs[2] and not obs[3]:
-                obs[3] = validate_field(calc_relative_humidity(obs[1], obs[2]),
-                                        float)
-            if obs[1] and obs[3]:
-                obs.append(validate_field(calc_heat_index(obs[1], obs[3]),
-                                          float))
-            else:
-                obs.append(None)
         engine.execute(
             Observation.__table__.insert(),
             [{"datetime_local": datetime.strptime(row[0], "%Y-%m-%d %I:%M %p"),
-              "time_zone": validate_field(time_zone, str),
-              "temperature_f": row[1],
-              "dew_point_f": row[2],
-              "relative_humidity": row[3],
-              "heat_index_f": row[14],
-              # "sea_level_pressure_in": validate_field(row[4], float),
-              # "visibility_miles": validate_field(row[5], float),
-              # "wind_direction": validate_field(row[6], str),
-              "wind_speed_mph": validate_field(row[7], float),
-              "gust_speed_mph": validate_field(row[8], float),
-              "precipitation_in": validate_field(row[9], float),
-              "events": validate_field(row[10], str),
-              "conditions": validate_field(row[11], str),
-              # "wind_dir_degrees": validate_field(row[12], float),
+              "time_zone": validate(time_zone, str),
+              "temperature_f": validate(row[1], float),
+              "dew_point_f": validate(row[2], float),
+              "relative_humidity": validate(row[3], float),
+              "heat_index_f": validate(row[14], float),
+              # "sea_level_pressure_in": validate(row[4], float),
+              # "visibility_miles": validate(row[5], float),
+              # "wind_direction": validate(row[6], str),
+              "wind_speed_mph": validate(row[7], float),
+              "gust_speed_mph": validate(row[8], float),
+              "precipitation_in": validate(row[9], float),
+              "events": validate(row[10], str),
+              "conditions": validate(row[11], str),
+              # "wind_dir_degrees": validate(row[12], float),
               "datetime_utc": datetime.strptime(row[13], "%Y-%m-%d %H:%M:%S"),
               "locale_airport_icao": airport_icao}
              for row in loc_obsvns]
