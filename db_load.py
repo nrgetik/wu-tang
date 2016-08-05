@@ -4,11 +4,16 @@
 import click
 import csv
 import os
+import sys
 from datetime import datetime
 from math import sqrt
 from sqlalchemy import create_engine
 
 from wu import Base, Locale, Observation
+
+
+def self_path():
+    return os.path.dirname(os.path.realpath(sys.argv[0]))
 
 
 def heat_index(t, rh):
@@ -47,8 +52,11 @@ def validate(v, t):
 
 
 @click.command()
-@click.option("--path", default="wu-tang.db", help="Path to save DB file")
-@click.option("--years", default=1, help="Number of years to attempt to load")
+@click.option("--path", default="{}/wu-tang.db".format(self_path()),
+              help="Path to save DB file (default '{}/wu-tang.db')."
+              .format(self_path()))
+@click.option("--years", default=1,
+              help="Number of years to attempt to load (default 1).")
 def main(path, years):
     engine = create_engine("sqlite:///{path}".format(path=path), echo=False)
     Base.metadata.create_all(engine)
